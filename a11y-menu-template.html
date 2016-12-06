@@ -16,40 +16,42 @@
 		<!-- Sim goes here! -->
 		<!-- Sim may include more than one screen -->
 		
-		<div role="toolbar" tabindex="0" aria-activedescendent="simHotkeys">
-			<!-- Optional List of Screens -->
-			<!-- <h3>Sim Screens</h3>
-			<ul class="screenlist" role="tablist">
-				<li id="screen01" class="screen" aria-controls="screenPanel01" role="tab" aria-selected="false" tabindex="-1">Screen One</li>
-				<li id="screen02" class="screen" aria-controls="screenPanel02" role="tab" aria-selected="false" tabindex="-1">Screen Two</li>
-				<li id="screen03" class="screen" aria-controls="screenPanel03" role="tab" aria-selected="false" tabindex="-1">Screen Three</li>
-				<li id="screen04" class="screen" aria-controls="screenPanel04" role="tab" aria-selected="false" tabindex="-1">Screen Four</li>
-				<li id="screenHome" class="screen selected" aria-controls="screenPanelHome" aria-selected="true" role="tab" tabindex="0">Home</li>
-			</ul>	 
-			-->
-			<!-- The button brings up the modal dialog.--> 
+		<div role="toolbar">
+ <!-- Optional List of Screens --> 
+  		<div id="simScreens"> 
+				<h3>Sim Screens</h3>
+				<ul class="screenlist" role="tablist">
+					<li id="screen01" class="screen" role="tab" aria-selected="false" tabindex="-1">Screen One</li>
+					<li id="screen02" class="screen" role="tab" aria-selected="false" tabindex="-1">Screen Two</li>
+					<li id="screen03" class="screen" role="tab" aria-selected="false" tabindex="-1">Screen Three</li>
+					<li id="screen04" class="screen" role="tab" aria-selected="false" tabindex="-1">Screen Four</li>
+					<li id="screenHome" class="screen selected" aria-selected="true" role="tab" tabindex="0">Home</li>
+					</ul>
+			</div>	 
+ 		 
 			<div>
+				<!-- The button brings up the modal dialog.-->
 				<button id="simHotkeys">Hot Keys and Help</button>
 				<p>Tips on how to use this sim with a keyboard.</p>
-			 </div>
+			</div>
 				
-			<nav id="phetMenu">
+			<nav tabindex="0">
 				<h3 id="phetMenu">Tools and Links</h3> 
 					<ul> 
 						<!-- Opens view options dialog with checkboxes. -->
-						<li><button>Options</button></li> 
+						<li><button id="optionsButton">Options</button></li> 
 						 <!-- Displays check test results in a dialog. -->
-						<li><button>Check for Updates</button></li>
+						<li><button id="updatedButton">Check for Updates</button></li>
 						<!-- Launches script to take a screen shot. -->
-						<li><button>Take a Screenshot</button></li>
+						<li><button id="screenshotButton">Take a Screenshot</button></li>
 						<!-- Launches script for full screen mode. -->
-						<li><button>Full Screen</button></li> 		
+						<li><button id="fullscreenButton">Full Screen</button></li> 		
 						<!-- Opens About this Sim Dialog -->
-						<li><button>About this Sim</button></li>
+						<li><button id="aboutButton">About this Sim</button></li>
 						<li><a href="https://phet.colorado.edu/files/troubleshooting/?BIG-LONG-LINK">Report a Problem</a></li>
 						<li><a href="http://phet.colorado.edu/">PhET Website</a></li>
 					</ul>
 			</nav>
-		</footer>
+		</div>
 	</body>
 </html>
