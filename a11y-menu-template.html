@@ -12,30 +12,42 @@
 			<!-- Header area for common sim stuff -->  
 			<!-- Name of Sim minus project name --> 
 			<h1>NAME OF SIM</h1> 
+		</header>
+		<!-- Sim goes here! -->
+		<!-- Sim may include more than one screen -->
+		
+		<div role="toolbar" tabindex="0" aria-activedescendent="simHotkeys">
 			<!-- Optional List of Screens -->
+			<!-- <h3>Sim Screens</h3>
 			<ul class="screenlist" role="tablist">
 				<li id="screen01" class="screen" aria-controls="screenPanel01" role="tab" aria-selected="false" tabindex="-1">Screen One</li>
 				<li id="screen02" class="screen" aria-controls="screenPanel02" role="tab" aria-selected="false" tabindex="-1">Screen Two</li>
 				<li id="screen03" class="screen" aria-controls="screenPanel03" role="tab" aria-selected="false" tabindex="-1">Screen Three</li>
 				<li id="screen04" class="screen" aria-controls="screenPanel04" role="tab" aria-selected="false" tabindex="-1">Screen Four</li>
 				<li id="screenHome" class="screen selected" aria-controls="screenPanelHome" aria-selected="true" role="tab" tabindex="0">Home</li>
-			</ul>		
-			<div><button>Hot Keys and Help</button></div>
-				<!-- The button (or link) brings up the modal dialog. HTML for dialog not yet included here.-->
-		</header>
-		<!-- Sim goes here! -->
-		<!-- Sim may include more than one screen -->
-		
-		<footer aria-labelledby="aboutLabel">
-			<h2 id="aboutLabel">About the PhET Project</h2>
-			<nav> 
-					<ul>
-						<li><a href="http://phet.colorado.edu/">PhET Website</a></li>
+			</ul>	 
+			-->
+			<!-- The button brings up the modal dialog.--> 
+			<div>
+				<button id="simHotkeys">Hot Keys and Help</button>
+				<p>Tips on how to use this sim with a keyboard.</p>
+			 </div>
+				
+			<nav id="phetMenu">
+				<h3 id="phetMenu">Tools and Links</h3> 
+					<ul> 
+						<!-- Opens view options dialog with checkboxes. -->
+						<li><button>Options</button></li> 
+						 <!-- Displays check test results in a dialog. -->
+						<li><button>Check for Updates</button></li>
+						<!-- Launches script to take a screen shot. -->
+						<li><button>Take a Screenshot</button></li>
+						<!-- Launches script for full screen mode. -->
+						<li><button>Full Screen</button></li> 		
+						<!-- Opens About this Sim Dialog -->
+						<li><button>About this Sim</button></li>
 						<li><a href="https://phet.colorado.edu/files/troubleshooting/?BIG-LONG-LINK">Report a Problem</a></li>
-						<li><button>Check for Updates</button><!-- Launches a check for an update and displays result in a dialog. --></li>
-						<li><button>Take a Screenshot</button><!-- Launches script to take a screen shot. --></li>
-						<li><button>Full Screen</button><!-- Launches script for full screen mode. --></li> 			
-						<li><button>About this Sim</button><!-- Opens About this Sim Dialog --></li>
+						<li><a href="http://phet.colorado.edu/">PhET Website</a></li>
 					</ul>
 			</nav>
 		</footer>
