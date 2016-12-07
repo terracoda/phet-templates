@@ -17,8 +17,8 @@
 		<!-- Sim may include more than one screen -->
 	
  <!-- Optional List of Screens -->  
- <!-- <div id="simToolbar" role="toolbar" tabindex="0">
-  		<div id="simScreens"> 
+ <div id="simToolbar" role="toolbar" aria-activedescendent="simHotkeys" tabindex="0">
+  		<!-- <div id="simScreens"> 
 				<h3>Sim Screens</h3>
 				<ul class="screenlist" role="tablist">
 					<li id="screen01" class="screen" role="tab" aria-selected="false" tabindex="-1">Screen One</li>
@@ -28,30 +28,25 @@
 					<li id="screenHome" class="screen selected" aria-selected="true" role="tab" tabindex="0">Home</li>
 					</ul>
 			</div> -->  
- 		 
+			
 			<div>
 				<!-- The button brings up the modal dialog.-->
 				<button id="simHotkeys">Hot Keys and Help</button>
 				<p>Tips on how to use this sim with a keyboard.</p>
 			</div>
 				
-			<nav tabindex="0">
-				<h3 id="phetMenu">Tools and Links</h3> 
-					<ul> 
-						<!-- Opens view options dialog with checkboxes. -->
-						<li><button id="optionsButton">Options</button></li> 
-						 <!-- Displays check test results in a dialog. -->
-						<li><button id="updatedButton">Check for Updates</button></li>
-						<!-- Launches script to take a screen shot. -->
-						<li><button id="screenshotButton">Take a Screenshot</button></li>
-						<!-- Launches script for full screen mode. -->
-						<li><button id="fullscreenButton">Full Screen</button></li> 		
-						<!-- Opens About this Sim Dialog -->
-						<li><button id="aboutButton">About this Sim</button></li>
-						<li><a href="https://phet.colorado.edu/files/troubleshooting/?BIG-LONG-LINK">Report a Problem</a></li>
-						<li><a href="http://phet.colorado.edu/">PhET Website</a></li>
-					</ul>
-			</nav>
-		</div>
+			<div aria-labelledby="phetMenuLabel" tabindex="0" aria-activedescendent="optionsButton">
+				<h3 id="phetMenuLabel">More Sim Tools and Links</h3>
+				<ul id="menuList">
+					<li><button id="optionsButton">View Options</button></li> 
+					<li><button id="updateButton">Check for Updates</button></li>
+					<li><button id="screenshotButton">Take a Screenshot</button></li>
+					<li><button id="fullscreenButton">Full Screen</button></li>
+					<li><a href="https://phet.colorado.edu/files/troubleshooting/?BIG-LONG-LINK">Report a Problem</a></li>
+					<li><button id="aboutButton">About this Sim</button></li>
+					<li><a href="http://phet.colorado.edu/">PhET Website</a></li>
+				</ul>
+			</div>
+		</div><!-- end simToolbar -->
 	</body>
 </html>
