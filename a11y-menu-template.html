@@ -16,26 +16,29 @@
 		<!-- Sim goes here! -->
 		<!-- Sim may include more than one screen -->
 	 
- <div id="simToolbar" role="toolbar" aria-activedescendent="simHotkeys" tabindex="0">
-	 		<!-- Optional list of screens would go here. --> 
-			<div>
+ <div id="simToolbar" role="menubar" aria-activedescendent="simHotkeys" tabindex="0" label="Sim Menubar">
+			<!-- Optional list of screens would go here in a tabpanel list. -->
+			
+			<div role="menuitem" aria-haspopup="true">
 				<!-- The button brings up the help dialog.-->
 				<button id="simHotkeys">Hot Keys and Help</button>
 				<p>Tips on how to use this sim with a keyboard.</p>
 			</div>
 				
-			<div aria-labelledby="phetMenuLabel" tabindex="0" aria-activedescendent="optionsButton">
-				<h3 id="phetMenuLabel">More Sim Tools and Links</h3>
-				<ul id="menuList">
-					<li><button id="optionsButton">View Options</button></li> 
-					<li><button id="updateButton">Check for Updates</button></li>
-					<li><button id="screenshotButton">Take a Screenshot</button></li>
-					<li><button id="fullscreenButton">Full Screen</button></li>
-					<li><a href="https://phet.colorado.edu/files/troubleshooting/?BIG-LONG-LINK">Report a Problem</a></li>
-					<li><button id="aboutButton">About this Sim</button></li>
-					<li><a href="http://phet.colorado.edu/">PhET Website</a></li>
+			<div role="menuitem" aria-describedby="phet-menu-description">
+				<button id="phet-menu-button" aria-haspopup="true">PhET Menu</button>
+				<p id="phet-menu-description">Tools and links for this sim.</p>
+				<ul id="phet-menu" aria-hidden="true" role="menu">
+					<li role="menuitem"><button>View Options</button></li> 
+					<li role="menuitem"><button>Check for Updates</button></li>
+					<li role="menuitem"><button>Take a Screenshot</button></li>
+					<li role="menuitem"><button>Full Screen</button></li>
+					<li role="menuitem"><a href="https://phet.colorado.edu/files/troubleshooting/?BIG-LONG-LINK">Report a Problem</a></li>
+					<li role="menuitem"><button id="aboutButton" role="menuitem">About this Sim</button></li>
+					<li role="menuitem"><a href="http://phet.colorado.edu/">PhET Website</a></li>
 				</ul>
 			</div>
+			
 		</div><!-- end simToolbar -->
 	</body>
 </html>
