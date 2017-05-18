@@ -14,6 +14,13 @@
 		:focus {
 		    border: 3px solid hotpink;
 		}
+		section {
+			background-color: #efefef;
+			border-bottom: 2px solid #666;
+			margin-bottom: 1em;
+			padding: 0.5em;
+		}
+
 		</style>                                                  
 	</head>
 	
@@ -40,14 +47,15 @@
 			<h2>Control Panel</h2>
 			<p>Additional interactive elements.</p>	
 		</section>
-				
- <footer id="simResourceBar" aria-label="Sim Resources and Tools">
-	<!-- Structurally, should the Screen navigation go inside or outside the bar? -->
+<!-- Bottom Bar Example 1: Footer -->			
+ <footer role="footer" aria-label="Sim Screens, Resources, and Tools">
+	 <h2>Footer with 2 nav regions</h2>
 	 <nav aria-label="Sim Screens">
-		 <ul>
-		   <li><a href="/screen-01"><span class="visually-hidden">Current screen:</span> Screen 1</a></li>
-		   <li><a href="/screen-02">Screen 2</a></li>
-		   <li><a href="/">home</a></li>
+		 <!-- Potential tablist or accordions for screens -->
+		<ul>
+		   <li><button href="#screen01" tabindex="0" aria-selected="true"><span class="visually-hidden">Current screen:</span> Screen 1</button></li>
+		   <li><button href="#screen02" tabindex="-1">Screen 2</button></li>
+		   <li><button href="#screenHome" tabindex="-1">home</button></li>
 		 </ul>
 	 </nav>
 	
@@ -69,11 +77,45 @@
 		</ul>
 	</nav><!-- end PheT Menu Nav -->
 			
-	</footer><!-- end Sim Resource Bar -->
+	</footer><!-- end FOOTER Sim Resource Bar -->
+<!-- Bottom Bar Example 2: Div Menubar with nested toolbar -->
+    <div role="menubar" aria-label="Sim Screens, Resources, and Tools">
+   	 <h2>Menubar Role</h2>
+   	<!-- Structurally, should the Screen navigation go inside or outside the bar? -->
+   	 <nav aria-label="Sim Screens">
+   		 <!-- Potential accordions for screens -->
+   		<ul>
+   		   <li><button href="#screen01" tabindex="0" aria-selected="true"><span class="visually-hidden">Current screen:</span> Screen 1</button></li>
+   		   <li><button href="#screen02" tabindex="-1">Screen 2</button></li>
+   		   <li><button href="#screenHome" tabindex="-1">home</button></li>
+   		 </ul>
+   	 </nav>
+	
+   	<!-- The button brings up the keyboard shortcuts dialog.-->
+   	  <button id="keyboard-shortcuts">Keyboard Shortcuts</button>
+	  
+   	<!-- Design pattern adapted from Pickering's menu button.-->
+   	<div role="toolbar" aria-label="Sim tools and links">
+   		<button aria-expanded="false">PhET Menu</button>
+	</div>
+   		<!-- <p>Tools and links for this sim.</p> -->
+   		<ul hidden>
+   			<li><button>View Options</button></li> 
+   			<li><button>Check for Updates</button></li>
+   			<li><button>Take Screenshot</button></li>
+   			<li><button>Full Screen</button></li>
+   			<li><a href="https://phet.colorado.edu/files/troubleshooting/?BIG-LONG-LINK">Report Problem</a></li>
+   			<li><button>About this Sim</button></li>
+   			<li><a href="http://phet.colorado.edu/">PhET Website</a></li>
+   		</ul>
+   	</nav><!-- end PheT Menu Nav -->
+			
+   	</div><!-- end Sim Resource Bar -->
 	</body>
 
 <!-- Javascript from Pickering Menu Button-->
 <script>
+	//For Example 1
 (function() {
 	// get the button and menu nodes
 	var button = document.querySelector('[aria-label="Sim tools and links"] button');
