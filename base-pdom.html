@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Balloons and Static Electricity</title>                                                     
+	</head>
+	<body>
+		<header>
+			<!-- Header area for common sim stuff.-->  
+			<h1>Balloons and Static Electricity</h1> 
+		</header>
+		<!-- Play Area--> 
+		  <section id="scene-summary" aria-labelledby="scene-label">
+		    <h2 id="scene-label">Scene Summary</h2>
+			  <p>Simulation contains a Play Area and a Control Panel. The Play Area is a small room. The Control Panel has buttons and switches to change conditions in the room.</p>
+			  <!-- Dynamic List for state of the room with 3 items. -->
+			  <ul>
+			    <li>Currently, room has a balloon, a sweater, and a removable wall.</li>
+			    <li>Yellow balloon, in center of play area, evenly between sweater and wall. Sweater is at far left, wall at far right.</li>
+			    <li>Balloon has a few pairs of negative and positive charges. The sweater and wall have many pairs of negative and positive charges. All have neutral net charge.</li>
+			  </ul>
+
+			   <!-- Static interaction hints. -->
+			   <p>Grab balloon to play.</p>
+			   <p>If needed, check out the <a href="#keyboard-shortcuts">keyboard shortcuts</a> for this sim.</p>			 
+		  </section>
+		  
+		  <section id="play-area" aria-labelledby="pa-label">
+			<h2 id="pa-label">Play Area</h2>                                       	
+			  <h3>Sweater</h3>
+			    <p>Sweater has neutral‬ net charge, no‬ more positive charges than negative charges.‬</p>
+			
+			  <h3>Yellow Balloon</h3>		    
+			    <p>In center of play area. Has neutral‬ net charge, no‬ more negative charges than positive charges.</p>
+				<p>Look for grab button to play.</p>
+				<div id="balloon-widget">
+				  <button>Grab Yellow Balloon</button>
+					  <!-- Grab button launches interactive balloon widget -->
+			   	</div>
+				
+			  <h3>Wall</h3>
+			    <p>Wall has neutral net charge, many pairs of negative and positive charges.</p> 
+			</section>
+			
+			<!-- Control Panel -->
+			<section id="control-panel" aria-labelledby="cp-label">
+			  <h2 id="cp-label">Control Panel</h2> 	
+			                     
+				<div id="wall-widget">
+				  <button>Remove Wall</button>
+				  <!-- On-demand help text for wall button. -->
+				  <p>Play with or without the wall.</p>
+				</div>
+					
+			    <div id="charge-view-widget" role="radiogroup" aria-labelledby="cs-label">
+				  <h3 id="cs-label">Charge Settings</h3>
+				  <!-- Static on-demand help text for charge radios. -->
+				  <p>Choose how you see or hear charge information.</p>	  
+				  <ul>
+					<li>
+						  <label for="show-charges">Show all charges</label> 
+						  <input id="show-charges" name="charge-settings" value="show-all" type="radio" aria-checked="true" checked>
+					</li>
+														
+					<li><label for="show-no-charges">Show no charges</label> 
+						<input id="show-no-charges" name="charge-settings" value="show-none" type="radio" aria-checked="false">
+					</li>
+									
+					<li>
+						<label for="show-charge-diffs">Show charge differences</label>
+						<input id="show-charge-diffs" name="charge-settings" value="show-differences" type="radio" aria-checked="false">
+					</li>
+			      </ul>
+				</div> 	                                                  
+					
+			    <div id="balloon-controls-widget" role="group">
+				
+				<h3 id="bs-label">Balloon Settings</h3>
+				  <label>Two-balloon experiment</label>
+				  <input type="checkbox" role="switch" aria-checked="false">
+				  <!-- Static on-demand help text tow-balloon button. --> 	                 
+				  <p>Play with two balloons or just one.</p>
+				    
+				  <button id="balloon-reset" type="reset">Reset Balloon</button>
+				  <!-- Static on-demand help text for rest balloon.--> 
+				  <p id="balloon-reset-description">Return balloon‬ to start position and uncharged state.‬</p>  
+				</div>
+			    
+				<div id="sim-reset-widget">
+			      <button id="sim-reset" type="reset">Reset All</button>
+				  <!-- No on-demand help-text for reset all. -->
+				</div>  
+	    </section>
+		
+		<!-- Simulation Bottom Bar -->
+		<div role="region" aria-label="Sim Resources and Tools">
+		  <ul aria-label="Sim Resources and Tools">
+		    <li>
+		      <button aria-haspopup="true">Keyboard Shortcuts</button>
+		      <p>Tips on how to use this sim with a keyboard.</p>
+		    </li>
+		    <li>
+		      <button id="phet-menu-button" aria-haspopup="true">PhET Menu</button>
+		      <p>Tools and links for this sim.</p>
+		    </li>
+		</ul>
+		</div>
+		<!-- PhET Menu items dynamically placed into PDOM. -->
+		<ul role="menu" aria-labelledby="phet-menu-button" hidden>
+		  <li><button role="menuitem">View Options</button></li> 
+		    <!-- Rest of the Phet Menu Items -->
+		</ul>
+	</body>
+</html>
